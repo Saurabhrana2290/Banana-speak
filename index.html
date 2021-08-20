@@ -6,26 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>banana-speak</title>
     <style>
-        #txt-input{
-            margin: 1rem;
-            padding: 1rem;
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0%;
+        }
+        h1{
+            text-align: center;
+            background-color: slateblue;
+            margin: 0%;
+            padding: 1.5rem;
+        }
+        textarea{
+            max-width: 80%;
+            width: 80%;
+            height: 100px;
             display: block;
+            margin: auto;
+            margin-top: 2rem;
+            border: 2px solid black;
         }
-        #output{
-            border: 1px solid black;
-            width: 60%;
+        button{
+            max-width: 80%;
+            width: 30%;
+            height: 70px;
+            display: block;
+            margin: auto;
+            margin-top: 2rem;
+            border: 2px seagreen black;
+            border-radius: 0.5rem;
+            
+        }
+
+        .output-cl{
+            width: 80%;
             height: 10vh;
-            margin: 1rem;
-            padding: 1rem;
+            border: 2px solid black;
+            margin: auto;
+            height: 100px;
         }
+
+        #instruction{
+            width: 30%;
+            margin: auto;
+        
+        }
+
+
+
     </style>
     
 </head>
 <body>
+    <h1>Minion Language</h1>
     <textarea name="" id="txt-input" cols="30" rows="10" placeholder="Enter something in english "></textarea>
     <button id="btn-translate">Translate</button>
-    <div id="output"></div>
-    <h1>talk banana</h1>
+    <div id="instruction">
+        <p>Translation will come here👇</p>
+    </div>
+    <div id="output" class="output-cl" style="padding: 1rem; font-size: large;"></div>
+    
     <script src="app.js"></script>
 </body>
 </html>
