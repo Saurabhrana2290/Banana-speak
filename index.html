@@ -1,72 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>banana-speak</title>
     <style>
-        *{
+        @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+        * {
             box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        :root{
+            --primary-color: #FBBF24;
         }
         body{
-            margin: 0%;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 20px;
+            background-image: url(/images/minion.jpg);
+            background-attachment: fixed;
+            background-size: 1355px 600px;
+            background-repeat: no-repeat;
         }
-        h1{
-            text-align: center;
-            background-color: slateblue;
-            margin: 0%;
-            padding: 1.5rem;
+
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
-        textarea{
-            max-width: 80%;
-            width: 80%;
+
+        .center-container {
+            max-width: 900px;
+            height: 60%;
+            margin: auto;
+        }
+
+        .navigation {
+            /* border: 2px solid black; */
+            background-color: var(--primary-color);
             height: 100px;
-            display: block;
-            margin: auto;
-            margin-top: 2rem;
-            border: 2px solid black;
         }
-        button{
-            max-width: 80%;
-            width: 30%;
-            height: 70px;
-            display: block;
-            margin: auto;
-            margin-top: 2rem;
-            border: 2px seagreen black;
+
+        .navigation .top-heading {
+            text-align: center;
+            /* border: 2px solid black; */
+            /* background-color: cornflowerblue; */
+            height: 80px;
+            padding-top: 1rem;
+            font-size: 50px;
+        }
+
+        .main {
+            /* border: 2px solid black; */
+        }
+
+        #txt-input {
             border-radius: 0.5rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            display: block;
+            height: 18vh;
+            width: 60%;
+            background-color:#A7F3D0;
+            font-size: 20px;
+        }
+        #btn-translate{
+            padding: 0.5rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            display: block;
+            border: 3px solid black;
+            background-color: var(--primary-color);
+            height: 8vh;
+            width: 20%;
+            font-family: 'Patrick Hand', cursive;
+            font-size: 20px;
+            border-radius: 2rem;
             
         }
-
-        .output-cl{
-            width: 80%;
-            height: 10vh;
-            border: 2px solid black;
-            margin: auto;
-            height: 100px;
-        }
-
         #instruction{
-            width: 30%;
-            margin: auto;
-        
+            margin-left: 2rem;
+            margin-top: 2rem;
+            font-size: 20px;
+            background-color: var(--primary-color);
+            width: 200px;
+            text-align: center;
+            border-radius: 2rem;
         }
-
-
-
+        #output{
+            border-radius: 0.5rem;
+            margin-left: 2rem;
+            margin-top: 0.1rem;
+            margin-bottom: 2rem;
+            font-size: 20px;
+            background-color: #A7F3D0;
+            width: 60%;
+            height: 18vh;
+            display: block;
+            border: 1px solid black;
+        }
+        .foot{
+            margin-top: 1rem;
+            margin-bottom: 0rem;
+            /* border: 2px solid black; */
+            text-align: center;
+            background-color: var(--primary-color);
+        }
+        #about-msg{
+            max-width: 60%;
+            margin: auto;
+            display: block;
+            font-size: 30px;
+        }
     </style>
-    
+
 </head>
+
 <body>
-    <h1>Minion Language</h1>
-    <textarea name="" id="txt-input" cols="30" rows="10" placeholder="Enter something in english "></textarea>
-    <button id="btn-translate">Translate</button>
-    <div id="instruction">
-        <p>Translation will come here👇</p>
+
+    <!-- nav bar containing heading -->
+    <nav class="navigation container">
+        <div class="top-heading">Minion Language</div>
+    </nav>
+
+    <!-- Thid is a main div-->
+    <div class="main center-container">
+        
+        <textarea id="txt-input" placeholder="Enter text in english "></textarea>
+
+        <button id="btn-translate">Translate To Minion</button>
+
+        <!-- this div contain instruction line -->
+        <div id="instruction">
+            <p>See Result👇</p>
+        </div>
+
+        <!-- this div contain output -->
+        <div id="output"></div>
     </div>
-    <div id="output" class="output-cl" style="padding: 1rem; font-size: large;"></div>
+
+    <footer class="foot">
+            <p id="about-msg">about</p>
+            <p class="center-container">Are you a fan of minions? Did you know that the gibberish they say is an actual language. Use the translator to convert your text from English to Minion speak or Banana language.</p>    
+    </footer>
     
+
+
+
     <script src="app.js"></script>
 </body>
+
 </html>
