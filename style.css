@@ -5,7 +5,7 @@
             margin: 0;
         }
         :root{
-            --primary-color: #FBBF24;
+            --primary-color: hsla(56, 96%, 56%, 0.945);
         }
         body{
             font-family: 'Patrick Hand', cursive;
