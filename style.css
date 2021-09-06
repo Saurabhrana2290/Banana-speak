@@ -11,9 +11,9 @@
             font-family: 'Patrick Hand', cursive;
             font-size: 20px;
             background-image: url(/images/minion.jpg);
-            background-attachment: fixed;
+            background-position: fixed;
             background-size: 1355px 600px;
-            background-repeat: no-repeat;
+            background-repeat: repeat;
         }
 
         .container {
@@ -23,7 +23,7 @@
 
         .center-container {
             max-width: 900px;
-            height: 60%;
+            /* height: 60%; */
             margin: auto;
         }
 
@@ -47,6 +47,7 @@
         }
 
         #txt-input {
+            padding: 0.5rem;
             border-radius: 0.5rem;
             margin-left: 2rem;
             margin-top: 2rem;
@@ -61,25 +62,28 @@
             margin-left: 2rem;
             margin-top: 2rem;
             display: block;
-            border: 3px solid black;
+            border: 3px solid #A7F3D0;
             background-color: var(--primary-color);
-            height: 8vh;
-            width: 20%;
+            height: auto;
+            width: auto;
             font-family: 'Patrick Hand', cursive;
             font-size: 20px;
             border-radius: 2rem;
-            
+            position: relative;
+            cursor: pointer;
         }
         #instruction{
             margin-left: 2rem;
             margin-top: 2rem;
             font-size: 20px;
             background-color: var(--primary-color);
-            width: 200px;
+            width: fit-content;
             text-align: center;
             border-radius: 2rem;
+            padding: 0.3rem;
         }
         #output{
+            padding: 0.5rem;
             border-radius: 0.5rem;
             margin-left: 2rem;
             margin-top: 0.1rem;
@@ -94,6 +98,7 @@
         .foot{
             margin-top: 1rem;
             margin-bottom: 0rem;
+            padding-bottom: 1rem;
             /* border: 2px solid black; */
             text-align: center;
             background-color: var(--primary-color);
@@ -104,3 +109,4 @@
             display: block;
             font-size: 30px;
         }
+        
